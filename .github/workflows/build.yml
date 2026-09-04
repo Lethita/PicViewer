@@ -49,4 +49,4 @@ jobs:
           tagName: ${{ github.ref_name }}
           releaseName: PicViewer ${{ github.ref_name }}
           generateReleaseNotes: true
-          releaseAssetNamePattern: PicViewer-[version]-windows-[arch][setup].[ext]
+          releaseAssetNamePattern: PicViewer-[version]-windows-[arch][setup][ext]
