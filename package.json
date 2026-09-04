@@ -2,8 +2,10 @@
   "name": "picviewer",
   "private": true,
   "packageManager": "pnpm@11.19.0",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "scripts": {
+    "dev": "tauri dev",
+    "build": "tauri build",
     "tauri": "tauri"
   },
   "devDependencies": {

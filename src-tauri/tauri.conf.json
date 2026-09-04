@@ -1,9 +1,10 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
   "productName": "PicViewer",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "identifier": "com.lethita.picviewer",
   "build": {
+    "beforeDevCommand": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/prepare-tauri.ps1",
     "beforeBuildCommand": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/prepare-tauri.ps1",
     "frontendDist": "../.tauri-dist"
   },
