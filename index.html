@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111114" />
+    <meta name="description" content="从本地目录随机浏览图片的瀑布流应用" />
+    <title>PicViewer · 本地图片浏览</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="PicViewer 首页">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="10" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="16" width="7" height="4" rx="1.5"/></svg></span>
+        <span>PicViewer</span>
+      </a>
+      <div class="header-actions">
+        <div class="gallery-switcher">
+          <button id="galleryMenuButton" class="gallery-menu-button" type="button" aria-haspopup="menu" aria-expanded="false">
+            <span class="gallery-dot" aria-hidden="true"></span><span id="currentGalleryName">默认图库</span>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m6 8 4 4 4-4"/></svg>
+          </button>
+          <div id="galleryMenu" class="gallery-menu" role="menu" hidden>
+            <div id="galleryOptions" class="gallery-options"></div>
+            <button id="newGalleryButton" class="new-gallery-item" type="button" role="menuitem"><span>＋</span>新建图库</button>
+          </div>
+        </div>
+        <button id="languageButton" class="language-button" type="button" aria-label="Switch language">EN</button>
+        <span id="imageCount" class="count">尚未添加图片</span>
+        <button id="favoriteFilter" class="icon-button" type="button" disabled aria-label="只看收藏" title="只看收藏">♡</button>
+        <button id="shuffleButton" class="icon-button" type="button" disabled aria-label="换一批图片" title="换一批">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+        </button>
+        <button id="addButton" class="primary-button" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          <span data-i18n="addDirectory">添加目录</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section id="galleryView" class="gallery-view">
+        <div class="gallery-heading">
+          <div>
+            <h1 data-i18n="images">图片</h1>
+          </div>
+          <div class="heading-actions"><button id="refreshButton" class="text-button" type="button" data-i18n="refresh">刷新索引</button><button id="manageButton" class="text-button" type="button" data-i18n="manage">管理目录</button></div>
+        </div>
+        <div id="galleryEmpty" class="gallery-empty" hidden>
+          <p id="galleryEmptyText">还没有关联图片目录</p>
+          <button id="galleryAddButton" class="primary-button" type="button">选择目录</button>
+        </div>
+        <div id="gallery" class="gallery" aria-live="polite"></div>
+        <div id="loading" class="loading" hidden><span></span><span></span><span></span></div>
+      </section>
+    </main>
+
+    <dialog id="directoryDialog" class="dialog">
+      <div class="dialog-head"><div><p class="eyebrow" data-i18n="sources">图片来源</p><h2 data-i18n="directories">关联目录</h2></div><button class="close-button" data-close="directoryDialog" aria-label="关闭">×</button></div>
+      <div id="directoryList" class="directory-list"></div>
+      <button id="dialogAddButton" class="primary-button wide" type="button" data-i18n="addAnother">+ 添加另一个目录</button>
+      <p class="dialog-tip" data-i18n="permissionTip">浏览器重新打开后，可能需要你再次授权目录访问。</p>
+    </dialog>
+
+    <dialog id="lightbox" class="lightbox">
+      <button class="lightbox-close" data-close="lightbox" aria-label="关闭预览">×</button>
+      <button id="previousImage" class="nav-button previous" aria-label="上一张">‹</button>
+      <figure><img id="lightboxImage" alt="" /><figcaption id="lightboxCaption"></figcaption></figure>
+      <div class="zoom-tools"><button id="zoomOut" aria-label="缩小">−</button><button id="favoriteImage" aria-label="收藏">♡</button><button id="zoomIn" aria-label="放大">＋</button><button id="fullscreenImage" aria-label="全屏">⛶</button></div>
+      <button id="nextImage" class="nav-button next" aria-label="下一张">›</button>
+    </dialog>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div id="dropZone" class="drop-zone"><strong data-i18n="drop">放开以添加目录</strong><span data-i18n="privacy">图片仍只保存在你的设备上</span></div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
