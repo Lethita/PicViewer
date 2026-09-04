@@ -4,6 +4,8 @@
 
 A local masonry image browser that runs in your browser. Create multiple galleries, link different local folders, and browse randomized images without uploading them anywhere.
 
+![PicViewer application screenshot](./docs/screenshot.png)
+
 ## Start
 
 On Windows, double-click `start.cmd`. It starts the local server and opens PicViewer without requiring Node.js, Python, or other dependencies. Close the command window to stop the server.
@@ -25,3 +27,4 @@ If PicViewer is already running on the default port, the launcher opens the exis
 - Full-size preview, zoom, fullscreen mode, and keyboard navigation
 - Remember folder handles and thumbnail cache with IndexedDB
 - Chinese and English interface
+
