@@ -1,1 +1,0 @@
-{"name":"PicViewer","short_name":"PicViewer","description":"A private local image browser","start_url":"./","scope":"./","display":"standalone","background_color":"#111114","theme_color":"#111114","icons":[{"src":"./icons/app-icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}

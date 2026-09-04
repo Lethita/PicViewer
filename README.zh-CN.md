@@ -8,7 +8,9 @@
 
 ## 启动
 
-Windows 用户直接双击 `start.cmd`。它会自动启动本地服务并打开浏览器，不需要安装 Node.js、Python 或其他依赖。关闭命令窗口即可停止服务。
+GitHub Actions 会为每次提交构建 Windows NSIS `.exe` 和 MSI 安装包，可在对应运行的 Artifacts 中下载。推送与应用版本一致的 `v*` 标签时，会自动创建 [GitHub Release](https://github.com/Lethita/PicViewer/releases) 并附上安装包。
+
+如需直接运行源码，Windows 用户可双击 `start.cmd`。它会自动启动本地服务并打开浏览器，不需要安装 Node.js、Python 或其他依赖。关闭命令窗口即可停止服务。
 
 也可以从终端指定端口：
 
