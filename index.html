@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#111114" />
-    <meta name="description" content="从本地目录随机浏览图片的瀑布流应用" />
+    <meta name="description" content="从本地目录随机浏览图片的瀑布流应用" />    <link rel="manifest" href="./manifest.webmanifest" />    <link rel="icon" href="./icons/app-icon.svg" type="image/svg+xml" />
     <title>PicViewer · 本地图片浏览</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -25,7 +25,7 @@
             <button id="newGalleryButton" class="new-gallery-item" type="button" role="menuitem"><span>＋</span>新建图库</button>
           </div>
         </div>
-        <button id="languageButton" class="language-button" type="button" aria-label="Switch language">EN</button>
+        <button id="installButton" class="install-button" type="button" hidden data-i18n="install">安装应用</button>        <button id="languageButton" class="language-button" type="button" aria-label="Switch language">EN</button>
         <span id="imageCount" class="count">尚未添加图片</span>
         <button id="favoriteFilter" class="icon-button" type="button" disabled aria-label="只看收藏" title="只看收藏">♡</button>
         <button id="shuffleButton" class="icon-button" type="button" disabled aria-label="换一批图片" title="换一批">
@@ -75,3 +75,5 @@
     <script type="module" src="./app.js"></script>
   </body>
 </html>
+
+
