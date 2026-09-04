@@ -8,7 +8,7 @@ A local masonry image browser built with Tauri. Create multiple galleries, link 
 
 ## Start
 
-Download stable builds from [GitHub Releases](https://github.com/Lethita/PicViewer/releases); the NSIS `.exe` installer is recommended. GitHub Actions also produces temporary artifacts for every revision.
+Download stable builds from [GitHub Releases](https://github.com/Lethita/PicViewer/releases); the NSIS `.exe` installer is recommended. Pushing a `v*` tag that matches the app version makes GitHub Actions build and publish the installers automatically.
 
 To run directly from source, double-click `start.cmd` on Windows. It starts the local server and opens PicViewer without requiring Node.js, Python, or other dependencies. Close the command window to stop the server.
 

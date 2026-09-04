@@ -8,7 +8,7 @@
 
 ## 启动
 
-正式版本可从 [GitHub Releases](https://github.com/Lethita/PicViewer/releases) 下载，推荐使用 NSIS `.exe` 安装包。GitHub Actions 也会为每次提交生成临时构建产物。
+正式版本可从 [GitHub Releases](https://github.com/Lethita/PicViewer/releases) 下载，推荐使用 NSIS `.exe` 安装包。推送与应用版本一致的 `v*` 标签时，GitHub Actions 会自动构建并发布安装包。
 
 如需直接运行源码，Windows 用户可双击 `start.cmd`。它会自动启动本地服务并打开浏览器，不需要安装 Node.js、Python 或其他依赖。关闭命令窗口即可停止服务。
 
